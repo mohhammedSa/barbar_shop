@@ -1,0 +1,209 @@
+/* global rules  */
+:root {
+  --main-font: "Roboto", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+li {
+  list-style: none;
+  display: inline;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+/* Small  */
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* Medium */
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* Large */
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* global rules  */
+body {
+  background-color: black;
+  height: 100vh;
+  font-family: var(--main-font);
+  background-image: url("../image/pexels-nick-demou-1319459-min.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@media (max-width: 991px) {
+  body {
+    background-image: none;
+  }
+}
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: -1;
+}
+/* start header  */
+header {
+  padding: 15px 0;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .container .logo a {
+  font-size: 30px;
+}
+header .container nav li:not(:last-child) {
+  margin-right: 50px;
+}
+@media (max-width: 767px) {
+  header .container {
+  justify-content: center;
+}
+  nav {
+    display: none;
+  }
+}
+header .container nav li a {
+  font-size: 18px;
+  transition: 0.3s;
+}
+header .container nav li a:hover {
+  color: rgb(141, 141, 56);
+  font-weight: bold;
+}
+/* end header  */
+/* start section  */
+.body {
+  padding: 50px 0 0;
+}
+@media (max-width: 767px) {
+.body {
+  padding-top: 0;
+  padding-bottom: 20px;
+}
+}
+.body .container {
+  display: flex;
+  justify-content: space-between;
+}
+.body .container .image {
+  position: relative;
+  width: 500px;
+}
+.body .container .image::before {
+  content: "";
+  position: absolute;
+  left: -110px;
+  top: 50%;
+  width: 110px;
+  height: 5px;
+  background-color: rgb(141, 141, 56);
+}
+.body .container .image::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -54px;
+  width: 5px;
+  height: 58px;
+  background-color: rgb(141, 141, 56);
+}
+
+@media (max-width: 991px) {
+  .body .container .image::before,
+  .body .container .image::after {
+    display: none;
+  }
+  .body .container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .body .container .image {
+    order: 1;
+    margin-top: 20px;
+  }
+}
+
+.body .container .image img {
+  max-width: 100%;
+  height: 450px;
+}
+
+.body .container .text {
+  color: white;
+  width: 300px;
+  text-align: center;
+}
+.body .container .text {
+  padding-top: 50px;
+}
+.body .container .text h1 {
+  font-size: 50px;
+}
+.body .container .text h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+.body .container .text h3 {
+  font-size: 25px;
+  color: rgb(141, 141, 56);
+}
+.body .container .text p {
+  padding: 15px 0 30px;
+}
+.body .text button {
+  background: none;
+  border: none;
+  padding: 0.5em;
+  border-radius: 5px;
+  transition: 0.3s;
+  font-weight: bold;
+}
+.body .container .text button:first-of-type {
+  background-color: rgb(141, 141, 56);
+  color: white;
+  box-shadow: 0 0 2px #ccc;
+}
+.body .container .text button:last-of-type {
+  color: rgb(141, 141, 56);
+  margin-left: 20px;
+  box-shadow: 0 0 2px #ccc;
+}
+.body .container .text button:hover {
+  background-color: white;
+  color: black;
+}
+
+/* end section  */
